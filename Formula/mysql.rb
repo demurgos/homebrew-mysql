@@ -46,8 +46,8 @@ class Mysql < Formula
   def install
     # -DINSTALL_* are relative to `CMAKE_INSTALL_PREFIX` (`prefix`)
     args = %W[
-      -DCMAKE_C_COMPILER=gcc-9.2
-      -DCMAKE_CXX_COMPILER=g++-9.2
+      -DCMAKE_C_COMPILER=/usr/local/bin/gcc-9
+      -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9
       -DFORCE_INSOURCE_BUILD=1
       -DCOMPILATION_COMMENT=Homebrew
       -DDEFAULT_CHARSET=utf8mb4
